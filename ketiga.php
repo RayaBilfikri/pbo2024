@@ -3,11 +3,9 @@
 class Lingkaran
 {
     const PHI = 3.14;
-
     public $jari_jari;
 
-    public function __construct(float $jari_jari)
-    {
+    public function __construct(float $jari_jari) {
         $this->jari_jari = $jari_jari;
     }
 
@@ -22,6 +20,10 @@ class Lingkaran
 
 class Bola extends Lingkaran
 {
+    public function __construct(float $jari_jari) {
+        parent::__construct($jari_jari);
+    }
+
     public function volume() : float {
         return (4/3) * self::PHI * pow($this->jari_jari, 3);
     }
@@ -35,8 +37,7 @@ class Tabung extends Lingkaran
 {
     public $tinggi;
 
-    public function __construct(float $jari_jari, float $tinggi)
-    {
+    public function __construct(float $jari_jari, float $tinggi) {
         parent::__construct($jari_jari);
         $this->tinggi = $tinggi;
     }
@@ -54,8 +55,7 @@ class Kerucut extends Lingkaran
 {
     public $tinggi;
 
-    public function __construct(float $jari_jari, float $tinggi)
-    {
+    public function __construct(float $jari_jari, float $tinggi) {
         parent::__construct($jari_jari);
         $this->tinggi = $tinggi;
     }
@@ -70,19 +70,14 @@ class Kerucut extends Lingkaran
     }
 }
 
-
-$lingkaran = new Lingkaran(7);
-echo "Lingkaran:\n";
-echo "Jari-jari: " . $lingkaran->jari_jari . "\n";
-echo "Luas: " . $lingkaran->luas() . "\n";
-echo "Keliling: " . $lingkaran->keliling() . "\n\n";
-
+// Membuat objek dari kelas Bola
 $bola = new Bola(7);
 echo "Bola:\n";
 echo "Jari-jari: " . $bola->jari_jari . "\n";
 echo "Volume: " . $bola->volume() . "\n";
 echo "Luas Permukaan: " . $bola->luasPermukaan() . "\n\n";
 
+// Membuat objek dari kelas Tabung
 $tabung = new Tabung(7, 10);
 echo "Tabung:\n";
 echo "Jari-jari: " . $tabung->jari_jari . "\n";
@@ -90,6 +85,7 @@ echo "Tinggi: " . $tabung->tinggi . "\n";
 echo "Volume: " . $tabung->volume() . "\n";
 echo "Luas Permukaan: " . $tabung->luasPermukaan() . "\n\n";
 
+// Membuat objek dari kelas Kerucut
 $kerucut = new Kerucut(7, 10);
 echo "Kerucut:\n";
 echo "Jari-jari: " . $kerucut->jari_jari . "\n";
