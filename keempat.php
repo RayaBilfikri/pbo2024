@@ -90,7 +90,9 @@ class Publisher {
         return $this->phone;
     }
 }*/
-
+require_once "Author.php";
+require_once "Book.php";
+require_once "Publisher.php";
 // Main
 $author = new Author("Jane Austen", "English novelist known for her novels set among the British landed gentry.");
 $book = new Book(123456789, "Pride and Prejudice", "A classic novel about manners and matrimonial machinations.", "Fiction", "English", 279, $author->show("name")[0], "Penguin Books");
