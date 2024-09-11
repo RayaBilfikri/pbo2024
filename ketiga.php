@@ -1,6 +1,6 @@
 <?php
 
-class Lingkaran
+/*class Lingkaran
 {
     const PHI = 3.14;
     public $jari_jari;
@@ -68,7 +68,7 @@ class Kerucut extends Lingkaran
         $sisi_miring = sqrt(pow($this->tinggi, 2) + pow($this->jari_jari, 2));
         return parent::luas() + (self::PHI * $this->jari_jari * $sisi_miring);
     }
-}
+}*/
 
 // Membuat objek dari kelas Bola
 $bola = new Bola(7);
