@@ -1,6 +1,6 @@
 <?php
 
-class Author {
+/*class Author {
     private string $name;
     private string $description;
 
@@ -89,7 +89,7 @@ class Publisher {
     public function getPhone(): string {
         return $this->phone;
     }
-}
+}*/
 
 // Main
 $author = new Author("Jane Austen", "English novelist known for her novels set among the British landed gentry.");
