@@ -1,31 +1,21 @@
 <?php
+namespace App\Admin;
 class Pegawai {
-    protected $nip;
-    protected $nama;
+    public $nip;
+    public $nama;
     protected $no_hp;
-    protected $alamat;
-
-    public function __construct($nip, $nama, $no_hp, $alamat) {
-        $this->nip = $nip;
-        $this->nama = $nama;
-        $this->no_hp = $no_hp;
-        $this->alamat = $alamat;
+    public $alamat;
+    public function cekIn() : bool {
+        return true;
     }
-
-    public function cekIn() {
-        // Implementasi cek in
+    public function cekOut() : bool {
+        return true;
     }
-
-    public function cekOut() {
-        // Implementasi cek out
-    }
-
-    public function getNoHp() {
+    public function getNoHp() : int {
         return $this->no_hp;
     }
-
-    public function setNoHp($no_hp) {
-        $this->no_hp = $no_hp;
-    }
+    public function setNoHp(int $newNoHp) : void {
+        $this->no_hp = $newNoHp;
+}
 }
 ?>
